@@ -223,7 +223,9 @@ function initSkillSphere() {
   }
 
   function render() {
-    const radius = Math.min(sphere.clientWidth, sphere.clientHeight) * 0.42;
+    // cap the horizontal reach tighter than the vertical so long labels
+    // never spill past the screen edge on narrow phones
+    const radius = Math.min(sphere.clientWidth * 0.3, sphere.clientHeight * 0.42);
     points.forEach((point) => {
       rotate(point, velX, velY);
       const depth = (point.z + 2) / 3; // 0.33 (back) → 1 (front)

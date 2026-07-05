@@ -141,6 +141,7 @@ a.chip:hover { text-decoration: underline; }
   top: 0; left: 0; right: 0;
   z-index: 100;
   background: rgba(253, 249, 243, 0.85);
+  -webkit-backdrop-filter: blur(12px); /* iOS Safari */
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s ease;
@@ -489,7 +490,7 @@ a.chip:hover { text-decoration: underline; }
   cursor: grab;
   -webkit-user-select: none;
   user-select: none;
-  touch-action: none; /* let drag own the gesture on touch screens */
+  touch-action: pan-y; /* horizontal drag spins the sphere, vertical swipe still scrolls the page */
 }
 .skill-sphere.dragging { cursor: grabbing; }
 
@@ -854,7 +855,6 @@ a.chip:hover { text-decoration: underline; }
   animation: marquee-scroll 20s linear infinite;
   will-change: transform;
 }
-.gallery-marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -971,6 +971,7 @@ a.chip:hover { text-decoration: underline; }
     top: 100%; left: 0; right: 0;
     flex-direction: column;
     background: rgba(253, 249, 243, 0.98);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 14px 24px 20px;
@@ -981,12 +982,38 @@ a.chip:hover { text-decoration: underline; }
 }
 
 @media (max-width: 560px) {
-  .section { padding: 64px 0; }
+  .section { padding: 56px 0; }
+  .container { padding: 0 18px; }
+  .section-title { font-size: 1.2rem; }
+  .section-hint { font-size: 0.78rem; margin-bottom: 26px; }
+
+  .hero { padding-top: 104px; }
+  .hero-grid { gap: 28px; }
+  .hero-sub { font-size: 0.92rem; }
+  .hero-cta { gap: 10px; }
+  .hero-cta .btn { padding: 12px 20px; font-size: 0.84rem; }
+
+  .code-body { font-size: 0.72rem; padding: 16px 14px; }
+  .terminal-body { font-size: 0.8rem; padding: 18px 16px 6px; }
+
   .form-row { grid-template-columns: 1fr; }
-  .stats-row { grid-template-columns: 1fr; }
-  .stat { border-right: none; border-bottom: 1px solid var(--border); }
-  .stat:last-child { border-bottom: none; }
+  .stats-row { grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: 14px 6px; }
+  .stat-value { font-size: 1.15rem; }
+  .stat-label { font-size: 0.58rem; }
+
   .timeline { padding-left: 28px; }
+  .commit-card { padding: 18px 16px; }
+  .commit-card h3 { font-size: 0.98rem; }
+  .commit-card p { font-size: 0.88rem; }
+
+  .project-card { padding: 18px 16px; }
+  .project-card p { font-size: 0.88rem; }
+  .project-top h3 { font-size: 0.95rem; }
+
+  .profile-card { padding: 24px 18px; }
+  .contact-form { padding: 16px 14px; }
+  .footer-inner { font-size: 0.78rem; }
 }
 
 /* respect reduced motion */
