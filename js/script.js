@@ -208,7 +208,27 @@ const SPHERE_SKILLS = [
   { label: 'Git', icon: 'git' },
 ];
 
-const SPHERE_COLORS = ['#a9714b', '#8d6e63', '#cf9445', '#8fa382'];
+const SPHERE_COLORS = {
+  light: ['#a9714b', '#8d6e63', '#cf9445', '#8fa382'],
+  dark:  ['#dfa571', '#bda093', '#e2b566', '#a8c197'],
+};
+
+function currentTheme() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+}
+
+// re-tint sphere labels and their CDN icons to match the active theme
+function applySphereTheme() {
+  const palette = SPHERE_COLORS[currentTheme()];
+  document.querySelectorAll('.sphere-word').forEach((el) => {
+    const color = palette[Number(el.dataset.ci)];
+    el.style.color = color;
+    const img = el.querySelector('img');
+    if (img && el.dataset.icon) {
+      img.src = `https://cdn.simpleicons.org/${el.dataset.icon}/${color.slice(1)}`;
+    }
+  });
+}
 
 function initSkillSphere() {
   const sphere = document.getElementById('skillSphere');
@@ -221,10 +241,13 @@ function initSkillSphere() {
     const r = Math.sqrt(1 - y * y);
     const theta = goldenAngle * i;
 
-    const color = SPHERE_COLORS[i % SPHERE_COLORS.length];
+    const palette = SPHERE_COLORS[currentTheme()];
+    const color = palette[i % palette.length];
     const el = document.createElement('span');
     el.className = 'sphere-word';
     el.style.color = color;
+    el.dataset.ci = i % palette.length;
+    el.dataset.icon = skill.icon || '';
 
     if (skill.icon) {
       const img = document.createElement('img');
@@ -321,6 +344,22 @@ function initSkillSphere() {
 }
 
 initSkillSphere();
+
+// ── theme toggle (light is default; choice is remembered) ──
+const themeToggle = document.getElementById('themeToggle');
+
+function setTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light');
+  if (themeToggle) themeToggle.textContent = dark ? '☀️' : '🌙';
+  applySphereTheme();
+}
+
+if (themeToggle) {
+  // sync the button icon with the theme applied by the inline head script
+  themeToggle.textContent = currentTheme() === 'dark' ? '☀️' : '🌙';
+  themeToggle.addEventListener('click', () => setTheme(currentTheme() !== 'dark'));
+}
 
 // ── gallery: block right-click / long-press save ──
 const galleryMarquee = document.getElementById('galleryMarquee');
