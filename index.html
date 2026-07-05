@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noora Nasir ✿ Cybersecurity Portfolio</title>
+  <meta name="description" content="Noora Nasir — Cybersecurity Analyst | SOC Analyst | AI Security. Portfolio, projects and experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-icon">✿</span>
+        <span class="brand-text">
+          <strong>Noora Nasir</strong>
+          <small>SOC Analyst · Cybersecurity</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero"       class="nav-link active"><span class="prompt">❀</span> home<span class="ext">.tsx</span></a>
+        <a href="#about"      class="nav-link"><span class="prompt">❀</span> about<span class="ext">.md</span></a>
+        <a href="#skills"     class="nav-link"><span class="prompt">❀</span> skills<span class="ext">.json</span></a>
+        <a href="#experience" class="nav-link"><span class="prompt">❀</span> experience<span class="ext">.git</span></a>
+        <a href="#projects"   class="nav-link"><span class="prompt">❀</span> projects<span class="ext">/</span></a>
+        <a href="#blogs"      class="nav-link"><span class="prompt">❀</span> blogs<span class="ext">/</span></a>
+        <a href="#gallery"    class="nav-link"><span class="prompt">❀</span> gallery<span class="ext">/</span></a>
+        <a href="#contact"    class="nav-link"><span class="prompt">❀</span> contact<span class="ext">.exe</span></a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero section" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="float-heart">🧸</span>
+      <span class="float-heart">🌻</span>
+      <span class="float-heart">☕</span>
+      <span class="float-heart">✨</span>
+      <span class="float-heart">🤎</span>
+      <span class="float-heart">🍪</span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="status-chip">
+          <span class="pulse-dot"></span> soc.monitor :: all systems secure
+        </div>
+
+        <h1 class="hero-title">
+          Hello, I'm <span class="gradient-name">Noora Nasir</span>
+          <span class="tag-decoration">&lt;SOCAnalyst /&gt;</span>
+        </h1>
+
+        <p class="hero-tagline">
+          <span class="typed" id="typedText"></span><span class="caret">|</span>
+        </p>
+
+        <p class="hero-sub">
+          Final-year Computer Science engineer specializing in Cybersecurity, with hands-on
+          experience in security operations, incident investigation, and AI-driven security
+          solutions. Currently preparing for CompTIA CySA+ while sharpening practical SOC
+          skills through LetsDefend labs and personal projects.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">✨ View My Work</a>
+          <a href="#contact" class="btn btn-outline">☕ Say Hello</a>
+        </div>
+
+        <div class="loaded-modules">
+          <span class="modules-label">loaded_modules:</span>
+          <span class="module-badge">SIEM</span>
+          <span class="module-badge">MITRE ATT&amp;CK</span>
+          <span class="module-badge">IOC ANALYSIS</span>
+          <span class="module-badge">INCIDENT RESPONSE</span>
+          <span class="module-badge">PYTHON</span>
+          <span class="module-badge">WIRESHARK</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="code-window">
+          <div class="window-bar">
+            <span class="dot dot-caramel"></span>
+            <span class="dot dot-cream"></span>
+            <span class="dot dot-sage"></span>
+            <span class="window-title">portfolio.tsx</span>
+          </div>
+          <pre class="code-body"><code><span class="ln">1</span><span class="kw">import</span> { <span class="cmp">Analyst</span> } <span class="kw">from</span> <span class="str">'./blue-team'</span>;
+<span class="ln">2</span>
+<span class="ln">3</span><span class="kw">const</span> <span class="cmp">Portfolio</span> = () <span class="kw">=&gt;</span> {
+<span class="ln">4</span>  <span class="kw">return</span> (
+<span class="ln">5</span>    &lt;<span class="cmp">Analyst</span>
+<span class="ln">6</span>      <span class="attr">name</span>=<span class="str">"Noora Nasir"</span>
+<span class="ln">7</span>      <span class="attr">role</span>=<span class="str">"SOC Analyst"</span>
+<span class="ln">8</span>      <span class="attr">mission</span>=<span class="str">"Defending the digital world ✨"</span>
+<span class="ln">9</span>      <span class="attr">poweredBy</span>=<span class="str">"coffee &amp; curiosity"</span>
+<span class="ln">10</span>    /&gt;
+<span class="ln">11</span>  );
+<span class="ln">12</span>};</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> about.me</h2>
+
+      <div class="about-grid">
+        <!-- profile card -->
+        <div class="profile-card reveal">
+          <div class="avatar-ring">
+            <div class="avatar"><img src="assets/profile-pic.jpeg" alt="Noora Nasir" /></div>
+          </div>
+          <div class="profile-rows">
+            <div class="profile-row"><span class="p-label">name</span><span class="p-value">NOORA NASIR</span></div>
+            <div class="profile-row"><span class="p-label">role</span><span class="p-value">SOC_ANALYST</span></div>
+            <div class="profile-row"><span class="p-label">location</span><span class="p-value">Fujairah, UAE 🇦🇪</span></div>
+            <div class="profile-row"><span class="p-label">degree</span><span class="p-value">B.E. CSE (Cybersecurity)</span></div>
+            <div class="profile-row"><span class="p-label">status</span><span class="p-value online">✨ OPEN TO WORK</span></div>
+          </div>
+        </div>
+
+        <!-- terminal about -->
+        <div class="terminal-card reveal">
+          <div class="window-bar">
+            <span class="dot dot-caramel"></span>
+            <span class="dot dot-cream"></span>
+            <span class="dot dot-sage"></span>
+            <span class="window-title">about_me.log</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt-arrow">➜</span> <span class="cmd">whoami</span></p>
+            <p class="terminal-text">
+              I'm a final-year CSE (IoT &amp; Cybersecurity including Blockchain) student with
+              hands-on experience in cybersecurity operations, data analysis, and AI-driven
+              security solutions. I love investigating security incidents, digging into
+              Indicators of Compromise, and turning noisy alerts into clear answers.
+            </p>
+            <p><span class="prompt-arrow">➜</span> <span class="cmd">cat</span> mission.txt</p>
+            <p class="terminal-text">
+              Working toward a career in the SOC — currently focused on
+              <span class="hl-caramel">Threat Detection</span>,
+              <span class="hl-mocha">Incident Response</span>, and
+              <span class="hl-honey">AI for Cybersecurity</span>,
+              while preparing for the CompTIA CySA+ certification.
+            </p>
+            <p><span class="prompt-arrow">➜</span> <span class="cmd">ls</span> certifications/</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">CompTIA CySA+ (in progress)</span>
+              <a class="chip chip-sm" href="assets/certificates/microsoft-security-fundamentals.pdf" target="_blank" rel="noopener">Microsoft SC-900 ↗</a>
+              <a class="chip chip-sm" href="assets/certificates/tcs-ion-cybersecurity.pdf" target="_blank" rel="noopener">TCS iON + IIT Ropar · Cyber Security Essentials ↗</a>
+              <span class="chip chip-sm">NPTEL · Cryptography &amp; Network Security</span>
+              <a class="chip chip-sm" href="assets/certificates/ibm-rapid-development-ai.pdf" target="_blank" rel="noopener">IBM · Rapid Development for AI ↗</a>
+              <span class="chip chip-sm">IIT Bombay · PHP, MySQL &amp; Java</span>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-label">cgpa</span>
+              <span class="stat-value">8.28<small>/10</small></span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">projects</span>
+              <span class="stat-value">8<small>+ built</small></span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">alerts</span>
+              <span class="stat-value">∞<small> triaged</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SKILLS ══════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">#</span> skills.json</h2>
+      <p class="section-hint">✨ drag to explore the skills universe</p>
+
+      <div class="sphere-wrap reveal">
+        <div class="skill-sphere" id="skillSphere" aria-label="Interactive rotating sphere of skills">
+          <div class="sphere-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="sphere-core">✿</span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">🛡️ Security Operations</h3>
+          <div class="chip-row">
+            <span class="chip">Threat Detection</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">IOC Analysis</span>
+            <span class="chip">Log Analysis</span>
+            <span class="chip">SIEM Fundamentals</span>
+            <span class="chip">MITRE ATT&amp;CK</span>
+            <span class="chip">Phishing Analysis</span>
+            <span class="chip">Malware Analysis</span>
+            <span class="chip">Email Header Analysis</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">🔍 Security Tools &amp; Testing</h3>
+          <div class="chip-row">
+            <span class="chip">Wireshark</span>
+            <span class="chip">LetsDefend</span>
+            <span class="chip">Kali Linux</span>
+            <span class="chip">Nmap</span>
+            <span class="chip">Burp Suite</span>
+            <span class="chip">Nikto</span>
+            <span class="chip">Vulnerability Assessment</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">💻 Programming &amp; AI</h3>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">C / C++</span>
+            <span class="chip">Bash</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Ollama / LLMs</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">📊 Data &amp; Analytics</h3>
+          <div class="chip-row">
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Seaborn</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Excel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ EXPERIENCE ══════════════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">$</span> git log --pretty=cute</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="commit-meta">
+            <span class="commit-hash">d3f3nd3</span>
+            <span class="commit-branch">HEAD → her-journey</span>
+            <span class="commit-date">April 2026</span>
+          </div>
+          <div class="commit-card">
+            <h3>Cyber Security Intern <span class="at">@</span> <span class="company">Al Fujairah National Insurance Company</span></h3>
+            <p>Analyzed cybersecurity policies to understand compliance requirements and the organization's
+               security posture. Built a structured Excel-based repository capturing policy objectives,
+               stakeholders, regulatory alignment, and governance details.</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">Security Governance</span>
+              <span class="chip chip-sm">Compliance</span>
+              <span class="chip chip-sm">Policy Analysis</span>
+              <span class="chip chip-sm">Excel</span>
+            </div>
+            <div class="diffstat">
+              <span>Fujairah, UAE</span>
+              <span class="ins">+1 security posture understood</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="commit-meta">
+            <span class="commit-hash">m0d3l42</span>
+            <span class="commit-branch">her-journey</span>
+            <span class="commit-date">Feb 2026 – May 2026</span>
+          </div>
+          <div class="commit-card">
+            <h3>Trainee Machine Learning Engineer <span class="at">@</span> <span class="company">Inventeron Technologies</span></h3>
+            <p>Assisted in developing, training, and evaluating machine learning models using supervised and
+               unsupervised algorithms. Performed data preprocessing, analysis, and validation to improve model
+               accuracy, collaborating with cross-functional teams on end-to-end ML workflows.</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">Python</span>
+              <span class="chip chip-sm">Scikit-learn</span>
+              <span class="chip chip-sm">Data Preprocessing</span>
+              <span class="chip chip-sm">Model Evaluation</span>
+            </div>
+            <div class="diffstat">
+              <span>Bangalore · Remote</span>
+              <span class="ins">+many models trained</span>
+              <span class="del">-noise removed from data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="commit-meta">
+            <span class="commit-hash">t3chl3ad</span>
+            <span class="commit-branch">her-journey</span>
+            <span class="commit-date">Jul 2024 – Jan 2025</span>
+          </div>
+          <div class="commit-card">
+            <h3>Technical Head <span class="at">@</span> <span class="company">Ionitix (student-led association)</span></h3>
+            <p>Managed end-to-end product development and overall system architecture, driving research and
+               implementation of IoT technologies to deliver efficient, scalable event solutions. Also led a
+               hands-on ML &amp; cybersecurity workshop for 62 students and coordinated a 2-day state-level
+               hackathon with 20 teams as Main Coordinator.</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">IoT</span>
+              <span class="chip chip-sm">System Architecture</span>
+              <span class="chip chip-sm">Leadership</span>
+              <span class="chip chip-sm">Event Coordination</span>
+            </div>
+            <div class="diffstat">
+              <span>Mangalore, India</span>
+              <span class="ins">+62 students taught ML</span>
+              <span class="ins">+20 hackathon teams wrangled</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="commit-meta">
+            <span class="commit-hash">gradu8</span>
+            <span class="commit-branch">her-journey</span>
+            <span class="commit-date">2022 – 2026</span>
+          </div>
+          <div class="commit-card">
+            <h3>B.E. in CSE — IoT &amp; Cybersecurity incl. Blockchain <span class="at">@</span> <span class="company">Yenepoya Institute of Technology, Mangalore</span></h3>
+            <p>Final-year engineering student with an 8.28 CGPA, specializing in IoT and Cybersecurity.
+               Attended Knowledge Summit 2024 (AI Innovations, Dubai) and Unfold 2024 (Web3 &amp; Blockchain,
+               Bangalore) along the way.</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">CGPA 8.28</span>
+              <span class="chip chip-sm">Cybersecurity</span>
+              <span class="chip chip-sm">IoT</span>
+              <span class="chip chip-sm">Blockchain</span>
+            </div>
+            <div class="diffstat">
+              <span>Mangalore, India</span>
+              <span class="ins">+4 years of learning</span>
+              <span class="del">-a few all-nighters</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-end reveal">
+          <span class="commit-hash">0r1g1n</span> Initial Commit — Royal Private School, Fujairah
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROJECTS ══════════════ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">$</span> ls ~/projects</h2>
+      <p class="section-hint">🍪 pinned projects — security first, always</p>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🤖 AI-Powered SOC Investigation Assistant</h3>
+            <span class="badge-public">Ongoing</span>
+          </div>
+          <p>An AI assistant that automates alert triage and security investigations — extracting and analyzing
+             IOCs, mapping findings to the MITRE ATT&amp;CK framework, and generating structured investigation
+             reports with recommended response actions.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">FastAPI</span>
+            <span class="chip chip-sm">LLMs</span>
+            <span class="chip chip-sm">MITRE ATT&amp;CK</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot"></span> Python</span>
+            <span class="repo-meta">🛡️ SOC + AI</span>
+            <a class="demo-link" href="https://github.com/nooranasir/AI-SOC-Assistant" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🔍 LetsDefend — SOC Analyst Labs</h3>
+            <span class="badge-public">Ongoing</span>
+          </div>
+          <p>Hands-on investigations of phishing, malware, and network security incidents in simulated SOC
+             environments — IOC analysis, log analysis, email investigations, and incident response, with case
+             reports documented on GitHub.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">LetsDefend</span>
+            <span class="chip chip-sm">Incident Response</span>
+            <span class="chip chip-sm">IOC Analysis</span>
+            <span class="chip chip-sm">Log Analysis</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot mocha"></span> Blue Team</span>
+            <span class="repo-meta">🛡️ SOC Labs</span>
+            <a class="demo-link" href="https://github.com/nooranasir/SOC-Analyst-Portfolio" target="_blank" rel="noopener">Case Reports ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🎣 Phishing Detection with ML</h3>
+            <span class="badge-public">Public</span>
+          </div>
+          <p>Designed a simulated phishing website to study social-engineering attack patterns, then built and
+             trained a machine learning model to classify legitimate vs phishing URLs using URL and
+             content-based features.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">Machine Learning</span>
+            <span class="chip chip-sm">Feature Engineering</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot"></span> Python</span>
+            <span class="repo-meta">🛡️ Security + ML</span>
+            <a class="demo-link" href="https://github.com/nooranasir/Phishing-web-detection-using-ML" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>💳 Fraud Detection System</h3>
+            <span class="badge-public">Public</span>
+          </div>
+          <p>A machine learning system for detecting fraudulent transactions — covering data preprocessing,
+             feature engineering, and model training and evaluation to separate suspicious activity from
+             legitimate behavior.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">Machine Learning</span>
+            <span class="chip chip-sm">Data Analysis</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot"></span> Python</span>
+            <span class="repo-meta">🛡️ Security + ML</span>
+            <a class="demo-link" href="https://github.com/nooranasir/Fraud-Detection-System" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🕵️ MITM Attack Simulation</h3>
+            <span class="badge-public">Lab</span>
+          </div>
+          <p>Simulated a Man-in-the-Middle attack in a controlled lab using Kali Linux, analyzing traffic
+             interception techniques to understand credential and data exposure risks, plus detection and
+             prevention mechanisms.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">Kali Linux</span>
+            <span class="chip chip-sm">Network Security</span>
+            <span class="chip chip-sm">Traffic Analysis</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot sage"></span> Kali Linux</span>
+            <span class="repo-meta">🛡️ Security Lab</span>
+            <a class="demo-link" href="https://github.com/nooranasir/MITM-attack" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🧩 Reverse Engineering &amp; Binary Analysis</h3>
+            <span class="badge-public">IIT Ropar</span>
+          </div>
+          <p>Reverse engineered compiled binaries to understand program logic and behavior — analyzing
+             assembly-level instructions, studying malware-like behavior and unpacking techniques, and detecting
+             obfuscation in executables.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">Reverse Engineering</span>
+            <span class="chip chip-sm">Assembly</span>
+            <span class="chip chip-sm">Malware Analysis</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot honey"></span> Binary</span>
+            <span class="repo-meta">🛡️ RE Lab</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <h3>🩺 Non-Invasive Glucose Monitor</h3>
+            <span class="badge-public">IoT + ML</span>
+          </div>
+          <p>An IoT-based glucose monitoring system built on ESP32 with MAX30102, BME280, and MPU6050 sensors.
+             Preprocessed raw PPG signals with NumPy/SciPy and developed regression models to estimate glucose
+             levels, validated with standard metrics.</p>
+          <div class="chip-row">
+            <span class="chip chip-sm">ESP32</span>
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">Signal Processing</span>
+            <span class="chip chip-sm">Regression</span>
+          </div>
+          <div class="project-foot">
+            <span class="repo-meta"><span class="lang-dot mocha"></span> IoT</span>
+            <span class="repo-meta">🩺 Health Tech</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="center">
+        <a href="https://github.com/nooranasir" target="_blank" rel="noopener" class="btn btn-outline">🌻 View all repositories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ BLOGS ══════════════ -->
+  <section class="section" id="blogs">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">$</span> ls ~/blogs</h2>
+      <p class="section-hint">✍️ security write-ups &amp; case notes</p>
+
+      <div class="blogs-grid">
+        <article class="blog-card reveal">
+          <div class="blog-cover">
+            <span class="pin-badge">📌 PINNED</span>
+            <span class="blog-cover-icon">📧</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>📅 Jul 2026</span>
+              <span>🕐 3 min read</span>
+            </div>
+            <h3 class="blog-title">The 3 Lines Hidden in Every Email Header That Tell You if an Email Is Legitimate</h3>
+            <p class="blog-excerpt">Every email carries three verification results in its headers — SPF, DKIM,
+               and DMARC. Learn to read them and you can tell in seconds whether a message really came from
+               where it claims to...</p>
+            <div class="chip-row">
+              <span class="chip chip-sm">🏷️ Cybersecurity</span>
+              <span class="chip chip-sm">🏷️ Email Security</span>
+              <span class="chip chip-sm">🏷️ SOC Analyst</span>
+              <span class="chip chip-sm">🏷️ Blue Team</span>
+            </div>
+            <a class="read-link" href="https://medium.com/@nooranasir712/the-3-lines-hidden-in-every-email-header-that-tell-you-if-an-email-is-legitimate-f09141bfbc09" target="_blank" rel="noopener">Read article →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="center">
+        <a href="https://medium.com/@nooranasir712" target="_blank" rel="noopener" class="btn btn-outline">✍️ View all posts on Medium</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ GALLERY ══════════════ -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">$</span> ls ~/gallery</h2>
+      <p class="section-hint">🌻 little moments — hover to pause</p>
+    </div>
+    <div class="gallery-marquee" id="galleryMarquee">
+      <div class="marquee-track">
+        <img src="assets/gallery/1.jpeg" alt="" draggable="false" />
+        <img src="assets/gallery/2.jpeg" alt="" draggable="false" />
+        <img src="assets/gallery/3.JPG"  alt="" draggable="false" />
+        <img src="assets/gallery/4.JPG"  alt="" draggable="false" />
+        <img src="assets/gallery/5.jpeg" alt="" draggable="false" />
+        <img src="assets/gallery/6.jpeg" alt="" draggable="false" />
+        <img src="assets/gallery/7.jpeg" alt="" draggable="false" />
+        <img src="assets/gallery/8.jpeg" alt="" draggable="false" />
+        <!-- duplicate set for a seamless loop -->
+        <img src="assets/gallery/1.jpeg" alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/2.jpeg" alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/3.JPG"  alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/4.JPG"  alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/5.jpeg" alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/6.jpeg" alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/7.jpeg" alt="" draggable="false" aria-hidden="true" />
+        <img src="assets/gallery/8.jpeg" alt="" draggable="false" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title"><span class="hash">$</span> ./contact.exe</h2>
+
+      <div class="contact-grid">
+        <!-- JSON contact card -->
+        <div class="code-window reveal">
+          <div class="window-bar">
+            <span class="dot dot-caramel"></span>
+            <span class="dot dot-cream"></span>
+            <span class="dot dot-sage"></span>
+            <span class="window-title">contact_info.json</span>
+          </div>
+          <pre class="code-body"><code><span class="ln">1</span>{
+<span class="ln">2</span>  <span class="attr">"status"</span>: <span class="str">"open to SOC analyst roles 🛡️"</span>,
+<span class="ln">3</span>  <span class="attr">"email"</span>: <span class="str">"nooranasir712@gmail.com"</span>,
+<span class="ln">4</span>  <span class="attr">"socials"</span>: {
+<span class="ln">5</span>    <span class="attr">"linkedin"</span>: <span class="str">"linkedin.com/in/nooranasir"</span>,
+<span class="ln">6</span>    <span class="attr">"github"</span>: <span class="str">"github.com/nooranasir"</span>
+<span class="ln">7</span>  },
+<span class="ln">8</span>  <span class="attr">"location"</span>: <span class="str">"Fujairah, UAE 🇦🇪"</span>,
+<span class="ln">9</span>  <span class="attr">"visa"</span>: <span class="str">"UAE Resident"</span>
+<span class="ln">10</span>}
+<span class="ln">11</span><span class="cmt">// waiting for your message... ✨</span></code></pre>
+        </div>
+
+        <!-- mail compose form -->
+        <div class="terminal-card reveal">
+          <div class="window-bar">
+            <span class="dot dot-caramel"></span>
+            <span class="dot dot-cream"></span>
+            <span class="dot dot-sage"></span>
+            <span class="window-title">mail.compose 💌</span>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-meta">
+              <span>to: <strong>nooranasir712@gmail.com</strong></span>
+              <span>response: <strong>within 24h 🤎</strong></span>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" placeholder="What is this about?" />
+            </div>
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+            <p class="form-note">// protected by good vibes &amp; spam filters</p>
+            <button type="submit" class="btn btn-primary btn-full">💌 Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>Noora Nasir</strong> · Cybersecurity Analyst · SOC Enthusiast</p>
+      <p>Built with 🤎 and a sprinkle of magic</p>
+      <p>© <span id="year"></span> Noora Nasir. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
