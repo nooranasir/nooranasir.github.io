@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
   <script>
-    // apply the saved theme before first paint to avoid a light flash
-    if (localStorage.getItem('portfolio-theme') === 'dark') {
+    // dark is the default; apply before first paint unless the visitor chose light
+    if (localStorage.getItem('portfolio-theme') !== 'light') {
       document.documentElement.setAttribute('data-theme', 'dark');
     }
   </script>
