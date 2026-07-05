@@ -110,22 +110,68 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-// ── contact form (placeholder — no backend yet) ──
+// ── contact form ──
+// For direct in-page sending, create a free form at https://formspree.io
+// (sign up with the destination email), then paste its form ID below,
+// e.g. 'xkgwabcd'. Until then, submissions open the visitor's email app
+// with the message pre-filled.
+const FORMSPREE_ID = '';
+const CONTACT_EMAIL = 'nooranasir712@gmail.com';
+
 const contactForm = document.getElementById('contactForm');
 
+function setButtonStatus(button, text, revertTo) {
+  button.textContent = text;
+  button.disabled = true;
+  setTimeout(() => {
+    button.textContent = revertTo;
+    button.disabled = false;
+  }, 3000);
+}
+
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = contactForm.querySelector('button[type="submit"]');
-    if (!button) return;
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const subject = document.getElementById('contact-subject').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+
+    if (!name || !email || !message) {
+      setButtonStatus(button, '⚠️ Please fill in name, email & message', '💌 Send Message');
+      return;
+    }
+
+    if (!FORMSPREE_ID) {
+      // no backend configured — hand off to the visitor's email app
+      const mailBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+      window.location.href =
+        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject || 'Message from portfolio')}` +
+        `&body=${encodeURIComponent(mailBody)}`;
+      return;
+    }
+
     const original = button.textContent;
-    button.textContent = '💌 Sent! (placeholder — no backend yet)';
+    button.textContent = '⏳ Sending...';
     button.disabled = true;
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (!response.ok) throw new Error(`Formspree responded ${response.status}`);
+      button.textContent = '✅ Sent! Thank you';
+      contactForm.reset();
+    } catch (error) {
+      button.textContent = '⚠️ Could not send — please email directly';
+    }
     setTimeout(() => {
       button.textContent = original;
       button.disabled = false;
-      contactForm.reset();
-    }, 2600);
+    }, 3000);
   });
 }
 

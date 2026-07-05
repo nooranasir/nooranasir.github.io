@@ -172,14 +172,15 @@ a.chip:hover { text-decoration: underline; }
 .brand-text strong { color: var(--heading); font-size: 1rem; }
 .brand-text small { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); }
 
-.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 2px; flex-wrap: nowrap; }
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--ink);
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 8px 9px;
   border-radius: 999px;
+  white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
 .nav-link .prompt { color: var(--caramel); opacity: 0; margin-right: 2px; transition: opacity 0.2s ease; }
@@ -965,7 +966,7 @@ a.chip:hover { text-decoration: underline; }
   .contact-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1080px) {
   .nav-links {
     position: absolute;
     top: 100%; left: 0; right: 0;
@@ -978,6 +979,7 @@ a.chip:hover { text-decoration: underline; }
     display: none;
   }
   .nav-links.open { display: flex; }
+  .nav-links .nav-link { font-size: 0.85rem; padding: 10px 12px; }
   .nav-toggle { display: flex; }
 }
 
